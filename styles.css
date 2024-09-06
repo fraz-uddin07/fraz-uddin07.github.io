@@ -1,0 +1,552 @@
+/* Reset and basic styling */
+body, h1, ul, li, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Set default font to Roboto */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light grey background for the entire page */
+    color: #333; /* Dark text color for readability */
+}
+
+header {
+    background: #fff; /* White background for the header */
+    color: #333; /* Dark text color for header */
+    padding: 0; /* Remove default padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better definition */
+}
+
+ nav {
+    display: flex;
+    /* position: fixed; */
+    justify-content: center; /* Center the nav items horizontally */
+    align-items: center;
+    height: 80px; /* Increased height for the navbar */
+    padding: 0 20px; /* Padding for spacing */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Set a max width to ensure proper alignment */
+    margin: auto;
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    font-size: 2em; /* Increased font size for the logo */
+    color: #333; /* Dark color for the logo */
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flex to align items horizontally */
+}
+
+.nav-links li {
+    display: inline-block; /* Change to inline-block to respect scaling */
+    margin: 0 15px; /* Adjust margin to bring tabs closer */
+}
+
+.nav-links a {
+    color: #333; /* Dark text color for links */
+    text-decoration: none;
+    font-size: 1.2em; /* Increased font size for better visibility */
+    font-weight: bold; /* Make the font bold */
+    line-height: 80px; /* Center align the text vertically */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+.nav-links a:hover {
+    color: #dc143c; /* Vibrant crimson color for hover effect */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    transform-origin: center; /* Ensure transform origin is center for a centered zoom effect */
+} 
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #fff; /* White background for the hero section */
+    padding: 0 20px; /* Add padding for spacing */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: subtle inner shadow for depth */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Max width to keep content aligned */
+    position: relative; /* Container for positioning elements */
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 20px; /* Space between text and image */
+    position: relative; /* Position relative for absolute positioning of the text */
+    z-index: 1; /* Ensure text is above other elements */
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-text span {
+    color: #dc143c; /* Vibrant crimson color for emphasis */
+}
+
+.hero-text .subtitle-wrapper {
+    position: relative;
+    height: 1.5em; /* Height to accommodate the text */
+    overflow: hidden; /* Hide overflow during animation */
+}
+
+.subtitle-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%); /* Start off-screen (below) */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for both opacity and transform */
+}
+
+.subtitle-text.show {
+    transform: translateY(0); /* Slide up to its original position */
+    opacity: 1; /* Fully visible */
+}
+
+.hero-buttons {
+    margin-top: 20px; /* Space between subtitle and buttons */
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 25px; /* Adjusted padding for better button appearance */
+    border-radius: 25px; /* Increased border-radius for a more rounded look */
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px; /* Space between buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
+}
+
+.btn-primary {
+    background-color: #dc143c; /* Vibrant crimson background */
+    color: #fff; /* White text */
+}
+
+.btn-primary:hover {
+    background-color: #c8102e; /* Darker crimson on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.btn-secondary {
+    background-color: #333; /* Dark background for the secondary button */
+    color: #fff; /* White text */
+}
+
+.btn-secondary:hover {
+    background-color: #555; /* Lighter dark background on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for the image */
+}
+
+/* Rest of the CSS code remains unchanged */
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    margin-top: 20px; /* Space above the icons */
+}
+
+.social-icon {
+    color: #333; /* Dark color for icons */
+    font-size: 1.5em; /* Adjust size of icons */
+    margin: 0 10px; /* Space between icons */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-icon:hover {
+    color: #dc143c; /* Vibrant crimson color on hover */
+}
+
+/* Rest of the CSS code remains unchanged */
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #fff; /* White background for the hero section */
+    padding: 0 20px; /* Add padding for spacing */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: subtle inner shadow for depth */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between text and image */
+    width: 100%;
+    max-width: 1200px; /* Max width to keep content aligned */
+}
+
+.hero-text {
+    flex: 1;
+    text-align: center; /* Center text */
+    padding-right: 20px; /* Space between text and image */
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-text span {
+    color: #dc143c; /* Vibrant crimson color for emphasis */
+}
+
+.hero-text .subtitle-wrapper {
+    position: relative;
+    height: 1.5em; /* Height to accommodate the text */
+    overflow: hidden; /* Hide overflow during animation */
+}
+
+.subtitle-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%); /* Start off-screen (below) */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for both opacity and transform */
+}
+
+.subtitle-text.show {
+    transform: translateY(0); /* Slide up to its original position */
+    opacity: 1; /* Fully visible */
+}
+
+.hero-buttons {
+    margin-top: 20px; /* Space between subtitle and buttons */
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 25px; /* Adjusted padding for better button appearance */
+    border-radius: 25px; /* Increased border-radius for a more rounded look */
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px; /* Space between buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and transform */
+}
+
+.btn-primary {
+    background-color: #dc143c; /* Vibrant crimson background */
+    color: #fff; /* White text */
+}
+
+.btn-primary:hover {
+    background-color: #c8102e; /* Darker crimson on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.btn-secondary {
+    background-color: #333; /* Dark background for the secondary button */
+    color: #fff; /* White text */
+}
+
+.btn-secondary:hover {
+    background-color: #555; /* Lighter dark background on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    margin-top: 20px; /* Space above the icons */
+}
+
+.social-icon {
+    color: #333; /* Dark color for icons */
+    font-size: 1.5em; /* Adjust size of icons */
+    margin: 0 10px; /* Space between icons */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-icon:hover {
+    color: #dc143c; /* Vibrant crimson color on hover */
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%; /* Optional: rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for the image */
+}
+
+
+/* Section Styling */
+/* Section Styling */
+section {
+    padding: 60px 20px; /* Padding for each section */
+    background-color: #fff; /* White background for sections */
+    color: #333; /* Dark text color for readability */
+    border-bottom: 1px solid #ddd; /* Light border for separation between sections */
+}
+
+.about {
+    text-align: center; /* Center text horizontally within the section */
+}
+
+.about .container {
+    display: flex; /* Use Flexbox to center content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+    gap: 40px; /* Space between the heading and the new divs */
+}
+
+.about h2 {
+    font-size: 2.5em; /* Adjust font size for the section title */
+    font-weight: bold; /* Make the title bold */
+    color: #333; /* Dark color for the title */
+    margin: 0; /* Remove default margin to keep it centered */
+}
+
+.education-container {
+    display: flex; /* Use Flexbox for side-by-side layout */
+    justify-content: center; /* Center the divs horizontally */
+    gap: 20px; /* Space between the two divs */
+    width: 100%; /* Ensure the container takes full width */
+    max-width: 1200px; /* Optional: Limit the maximum width of the container */
+}
+
+.education-details {
+    text-align: center; /* Center text horizontally within each div */
+    padding: 20px; /* Padding inside each div */
+    background-color: #f9f9f9; /* Light grey background for contrast */
+    border: 2px solid #333; /* Initial border color */
+    border-radius: 8px; /* Slightly rounded corners */
+    flex: 1; /* Ensure each div takes up equal space */
+    max-width: 500px; /* Optional: Limit width for better readability */
+    transition: border-color 0.3s ease, color 0.3s ease; /* Smooth transition for border color and text color */
+}
+
+.education-details h3 {
+    font-size: 2em; /* Adjust font size for the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Dark color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    transition: color 0.3s ease; /* Smooth transition for heading color change */
+}
+
+.education-details p {
+    font-size: 1em; /* Font size for the paragraph text */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+.education-details:hover {
+    border-color: #dc143c; /* Crimson border color on hover */
+}
+
+.education-details:hover h3 {
+    color: #dc143c; /* Crimson heading color on hover */
+}
+
+
+/* Section Styling */
+section {
+    padding: 60px 20px; /* Padding for each section */
+    background-color: #fff; /* White background for sections */
+    color: #333; /* Dark text color for readability */
+    border-bottom: 1px solid #ddd; /* Light border for separation between sections */
+    position: relative; /* Ensure correct positioning for child elements */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.projects {
+    text-align: center; /* Center text horizontally within the section */
+}
+
+.projects .container {
+    display: flex; /* Use Flexbox to center content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.projects h2 {
+    font-size: 2.5em; /* Adjust font size for the section title */
+    font-weight: bold; /* Make the title bold */
+    color: #333; /* Dark color for the title */
+    margin: 0 0 40px; /* Remove default margin and add space below */
+}
+
+.project-list {
+    display: flex; /* Use Flexbox for horizontal layout */
+    flex-direction: column; /* Stack project items vertically */
+    gap: 20px; /* Space between project items */
+    width: 100%; /* Ensure the list takes full width */
+    max-width: 1200px; /* Optional: Limit the maximum width of the container */
+}
+
+.project-item {
+    display: flex; /* Use Flexbox for horizontal layout */
+    align-items: center; /* Align items vertically in the center */
+    gap: 20px; /* Space between image and description */
+    background-color: #f9f9f9; /* Light grey background for contrast */
+    border: 2px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Slightly rounded corners */
+    padding: 20px; /* Padding inside each project item */
+    position: relative; /* Relative positioning for animation */
+    opacity: 0; /* Start as invisible */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+}
+
+.project-item.fade-in {
+    animation: fadeIn 0.5s forwards; /* Apply fade-in animation */
+}
+
+.project-item.reverse {
+    flex-direction: row-reverse; /* Reverse the order of image and description */
+}
+
+.project-image img {
+    max-width: 250px; /* Limit the width of the project image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Slightly rounded corners for images */
+}
+
+.project-description {
+    padding:20px;
+    text-align: left; /* Align text to the left for description */
+}
+
+.project-description h3 {
+    font-size: 1.5em; /* Adjust font size for the project title */
+    font-weight: bold; /* Make the title bold */
+    color: #333; /* Dark color for the title */
+    margin: 0 0 10px; /* Space below the title */
+    display: flex; /* Use Flexbox for icon alignment */
+    align-items: center; /* Align items vertically in the center */
+    gap: 10px; /* Space between title and icon */
+}
+
+.project-description:hover h3 {
+    color : #dc143c;
+}
+
+.github-icon {
+    color: #333; /* Dark color for the GitHub icon */
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.github-icon:hover {
+    color: #c8102e; /* Crimson color for the icon on hover */
+}
+
+.project-description p {
+    font-size: 1em; /* Font size for the project description */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+/* Keyframes for fade-in animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation trigger class */
+.animate {
+    animation: fadeIn 0.5s forwards; /* Apply fade-in animation */
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px; /* Padding for the contact section */
+    background-color: #f4f4f4; /* Light grey background */
+    text-align: center; /* Center-align text */
+}
+
+.contact h2 {
+    font-size: 2.5em; /* Adjust font size for the section title */
+    font-weight: bold; /* Make the title bold */
+    color: #333; /* Dark color for the title */
+    margin: 0 0 20px; /* Remove default margin and add space below */
+    display: inline-block; /* Ensures the heading is centered within its container */
+}
+
+.contact-info {
+    display: flex; /* Use Flexbox for horizontal layout */
+    justify-content: center; /* Center-align items horizontally */
+    gap: 20px; /* Space between icons */
+}
+
+.contact-icon {
+    display: inline-flex; /* Inline Flexbox for icon alignment */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    width: 50px; /* Set width for icons */
+    height: 50px; /* Set height for icons */
+    border-radius: 50%; /* Circular icon background */
+    background-color: #fff; /* White background for icons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for icons */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    color: #333; /* Default icon color */
+}
+
+.contact-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+    background-color: #c8102e; /* Crimson background on hover */
+    color: #fff; /* White color for icon on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.contact-icon.linkedin {
+    color: #0077b5; /* LinkedIn color */
+}
+
+.contact-icon.github {
+    color: #333; /* GitHub color */
+}
+
+.contact-icon.email {
+    color: #d14836; /* Email color */
+}
+

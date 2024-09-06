@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="#" class="logo">Md Fraz Uddin</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#experience">Experience</a></li> -->
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I am <span>Md Fraz Uddin</span></h1>
+                <div class="subtitle-wrapper">
+                    <div class="subtitle-text">A software developer</div>
+                    <!-- <div class="subtitle-text">Gamer</div>
+                    <div class="subtitle-text">Anime Lover</div>
+                    <div class="subtitle-text">Technology Enthusiast</div> -->
+                </div>
+                <div class="hero-buttons">
+                    <a href="assets/MD_FRAZ_UDDIN_CV_1_2_3.pdf" download="FRAZ_CV" class="btn btn-primary">Download CV</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/fraz-uddin07" class="social-icon" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://in.linkedin.com/in/fraz-uddin-8396b0215" class="social-icon" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/about-pic2.png" alt="Fraz">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="education-container">
+                <div class="education-details">
+                    <h3>M.Tech in CSE</h3>
+                    <p>Curently studying M.Tech in Computer Science and Engineering from International Institute of Infromation Technology, Hyderabad</p>
+                </div>
+                <div class="education-details">
+                    <h3>B.Tech in CSE</h3>
+                    <p>Graduated from Heritage Institute of Technology in 2023 with a Bachelors degree in Computer Science and Engineering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-item fade-in">
+                    <div class="project-image">
+                        <img src="assets/rtracer.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-description">
+                        <h3>FZ_Rtracer <a href="https://github.com/fraz-uddin07/FZ_Rtracer" target="_blank" class="github-icon"><i class="fab fa-github"></i></a></h3>
+                        <p>FZ Rtracer - Realtime Ray Tracing Engine</p>
+                        <ul>
+                            <li> A Realtime Ray Tracing simulator with multi-platform support</li>
+                            <li>Includes support for sphere geometry with multiple different surface types including Lambertian, Metallic and Glass</li>
+                            <li> Supports multiple rendering and post processing features including Antialiasing, Gamma Correction, True Lambertian
+                                Reflections and Defocus Blur.</li>
+                            <li> Technologies Used: <b>Java, Swing, Jprofiler</b></li>
+                        </ul>
+                    </div>
+                </div>  
+                <div class="project-item fade-in reverse">
+                    <div class="project-image">
+                        <img src="assets/chess.png" alt="Project 2">
+                    </div>  
+                    <div class="project-description">
+                        <h3>FZ_Chess <a href="https://github.com/fraz-uddin07/FZ_CHESS" target="_blank" class="github-icon"><i class="fab fa-github"></i></a></h3>
+                        <p>FZ Chess - GUI based Chess Game</p>
+                        <ul>
+                            <li> Chess-clone written in C++ 17 with GUI designed with Simple DirectMedia Layer(SDL) and SDL Image libraries for Windows</li>
+                            <li>Includes features such as Checkmate Detection, wrong turn detection and multiple Chessboard color themes</li>
+                            <li>Technologies Used: <b>C++ 17, SDL, SDL Image</b></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-item fade-in">
+                    <div class="project-image">
+                        <img src="assets/sim_notes.png" alt="Project 3">
+                    </div>
+                    <div class="project-description">
+                        <h3>Simplify Notes <a href="https://github.com/yourusername/project3" target="_blank" class="github-icon"><i class="fab fa-github"></i></a></h3>
+                        <p>Simplify Notes - Google Chrome Extension</p>
+                        <ul>
+                            <li> Chrome Extension designed to simplify note taking in Chrome browser.</li>
+                            <li>Automates the process of copy-pasting words, paragraphs and images from multiple sites directly into google docs</li>
+                            <li>Utilises Google Docs and Google Chrome API to make note taking seamless.</li>
+                            <li>Technologies Used: <b>HTML, CSS, Javascript</b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+            <a href="https://in.linkedin.com/in/fraz-uddin-8396b0215" target="_blank" class="contact-icon linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/fraz-uddin07" target="_blank" class="contact-icon github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:fraz.uddin07@gmail.com" class="contact-icon email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
